@@ -127,7 +127,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await context.bot.send_message(chat_id=CHANNEL_ID, text=msg_to_send)
             await query.answer("پیام ارسال شد ✅")
 
-app = Application.builder().token("YOUR_BOT_TOKEN").build()
+import os
+app = Application.builder().token(os.getenv("BOT_TOKEN")).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("list", list_lessons))
 app.add_handler(CommandHandler("search", search))
