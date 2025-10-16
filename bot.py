@@ -128,7 +128,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.answer("پیام ارسال شد ✅")
 
 import os
-app = Application.builder().token(os.getenv("BOT_TOKEN")).build()
+app = Application.builder().token("8292482515:AAGP-fRHqGk7EejnKdGBU8xWlXjuxUgleR4")).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("list", list_lessons))
 app.add_handler(CommandHandler("search", search))
